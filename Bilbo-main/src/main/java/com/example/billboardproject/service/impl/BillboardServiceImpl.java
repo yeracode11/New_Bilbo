@@ -17,7 +17,7 @@ public class BillboardServiceImpl implements BillboardService {
 
     @Override
     public List<Billboard> getAllBillboards() {
-        return billboardRepository.findAllOrderByCreatedAt();
+        return billboardRepository.findAll();
     }
 
     @Override
@@ -43,8 +43,8 @@ public class BillboardServiceImpl implements BillboardService {
     public List<Billboard> getAllActiveBillboards() {
         List<Billboard> billboards = getAllBillboards();
         List<Billboard> activeBillboards = new ArrayList<>();
-
         for (Billboard bill:billboards) {
+            System.out.println(bill.getId() + " " + bill.isActive());
             if (bill.isActive()) {
                 activeBillboards.add(bill);
             }
