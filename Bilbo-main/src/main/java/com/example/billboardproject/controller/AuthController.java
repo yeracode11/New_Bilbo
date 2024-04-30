@@ -26,6 +26,9 @@ public class AuthController {
         return "login1";
     }
 
+    @GetMapping(value = "/manager")
+    public String managerPage() {return "login_manager";}
+
     @GetMapping(value = "/register")
     public String registerPage() {
         return "register1";
