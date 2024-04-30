@@ -11,6 +11,6 @@ import java.util.List;
 @Repository
 @Transactional
 public interface BillboardRepository extends JpaRepository<Billboard, Long> {
-    @Query(value = "select * from billboard order by created_at desc",nativeQuery = true)
-    List<Billboard> findAllOrderByCreatedAt();
+    // @Query(value = "select * from billboard order by created_at desc",nativeQuery = true)
+    // List<Billboard> findAllOrderByCreatedAt();
 }
